@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.pricing-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #FF6B82;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.pricing-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pricing-option {
+    position: relative;
+}
+
+.pricing-option input[type="radio"] {
+    display: none;
+}
+
+.option-label {
+    display: block;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pricing-option input[type="radio"]:checked + .option-label {
+    border-color: #FF6B82;
+    background-color: #fff9fb;
+    box-shadow: 0 2px 8px rgba(255, 107, 130, 0.1);
+}
+
+.pricing-option:hover .option-label {
+    border-color: #FF6B82;
+    transition: all 0.3s ease;
+}
+
+.unit-selections {
+    display: none;
+}
+
+.pricing-option input[type="radio"]:checked + .option-label .unit-selections {
+    display: block;
+}
+
+.popular {
+    border: 2px solid #FF6B82;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    right: 10px;
+    background: #FF6B82;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.radio-circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.pricing-option input[type="radio"]:checked + .option-label .radio-circle {
+    border-color: #FF6B82;
+}
+
+.pricing-option input[type="radio"]:checked + .option-label .radio-circle::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #FF6B82;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.unit-count {
+    font-weight: bold;
+}
+
+.discount {
+    background: #FF6B82;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.selection-group {
+    margin-top: 1rem;
+}
+
+.item-select {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.item-number {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    min-width: 100px;
+}
+
+.footer {
+    margin-top: 2rem;
+}
+
+.delivery-info {
+    color: #FF6B82;
+    margin-bottom: 1rem;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.powered-by {
+    color: #999;
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    background: #FF6B82;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #ff8599;
+}
+
+.powered-by {
+    color: #999;
+    font-size: 0.8rem;
+}
